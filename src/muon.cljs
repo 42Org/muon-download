@@ -35,7 +35,8 @@
 (defn save-package [pkg]
   (let [path (str "vendor/" (aget pkg "name"))
         file (.createWriteStream fs path)]
-      (.pipe (download (aget pkg "url") "vendor/" #js{:extract true}) file)))
+    (.log js/console "Downloading Muon")
+    (.pipe (download (aget pkg "url") "vendor/" #js{:extract true}) file)))
 
 (defn json-start [chunk]
   (reset! json (str @json chunk)))
