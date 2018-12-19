@@ -1,0 +1,29 @@
+{
+  "name": "muon-download",
+  "version": "0.0.1",
+  "description": "Download a Muon release from Brave/muon github repo.",
+  "main": "main.js",
+  "scripts": {
+    "build": "lumo build.cljs && rm -rf out/",
+    "fetch": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:42Org/muon-download.git"
+  },
+  "keywords": [
+    "brave",
+    "muon",
+    "download"
+  ],
+  "author": "Metacritical <pankajdoharey@gmail.com>",
+  "license": "WTFPL",
+  "devDependencies": {
+    "lumo-cljs": "^1.9.0"
+  },
+  "dependencies": {
+    "decompress": "^4.2.0",
+    "progress-download": "^1.0.4",
+    "shelljs": "^0.8.3"
+  }
+}
