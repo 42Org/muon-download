@@ -2,8 +2,7 @@
 
 (b/build
  (b/inputs "src")
- {:main muon
-  :output-to "main.js"
+ {:output-to "main.js"
   :output-dir "out/"
   :optimizations :simple
   :target :nodejs
