@@ -4,8 +4,8 @@
   "description": "Download a Muon release from Brave/muon github repo.",
   "main": "main.js",
   "scripts": {
-    "build": "lumo build.cljs && rm -rf out/",
-    "start": "node main.js"
+    "start": "node main.js",
+    "build": "lumo build.cljs && rm -rf out/"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "decompress": "^4.2.0",
-    "progress-download": "^1.0.4",
+    "progress-download": "^1.0.4"
   }
 }
