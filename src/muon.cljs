@@ -2,8 +2,6 @@
   (:require ["fs" :as fs]
             ["os" :as os]
             ["https" :as https]
-            ["shelljs" :as shell]
-            ["cljs.nodejs" :as nodejs]
             ["decompress" :as decompress]
             ["progress-download" :as download]))
 
