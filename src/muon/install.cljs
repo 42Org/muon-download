@@ -3,6 +3,8 @@
             ["path" :as path]
             ["child_process" :as proc]))
 
+
+;; (def pkg-resolve (js/require.resolve "mkdirp"))
 (def pkg-resolve (js/require.resolve "muon-download"))
 
 (defn bin-name [pkg]
@@ -15,8 +17,9 @@
 (defn main []
   (let [argv js/process.argv
         pkg (.dirname path pkg-resolve)
-        bin (bin-name pkg)]
-    (.spawn proc bin (.slice argv 3))
-    ))
+        bin (bin-name pkg)
+        app (.slice argv 2)]
+    (.log js/console "App file: " app)
+    (.spawn proc bin app)))
 
 (main)
