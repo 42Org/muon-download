@@ -3,8 +3,6 @@
             ["path" :as path]
             ["child_process" :as proc]))
 
-
-;; (def pkg-resolve (js/require.resolve "mkdirp"))
 (def pkg-resolve (js/require.resolve "muon-download"))
 
 (defn bin-name [pkg]
@@ -19,7 +17,7 @@
         pkg (.dirname path pkg-resolve)
         bin (bin-name pkg)
         app (.slice argv 2)]
-    (.log js/console "App file: " app)
-    (.spawn proc bin app)))
+    (.log js/console "Starting muon")
+    (.spawn proc bin app #js{:stdio "inherit"})))
 
 (main)
