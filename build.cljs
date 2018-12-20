@@ -38,8 +38,8 @@
     (.log js/console "Exec script: " command)
     (case command
       "build-bin" (build-bin)
-      "release" ((release) (build-bin))
-      (build))))
+      "release" (do (release) (build-bin)))
+      (build)))
 
 (-main)
 

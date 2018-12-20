@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node main.js",
     "build": "lumo -c src build.cljs",
-    "release": "lumo -c src build.cljs release && rm -rf out/",
+    "release": "lumo -c src build.cljs release",
     "build-bin": "lumo -c src build.cljs build-bin",
     "install": "if [ -d 'vendor' ]; then rm -rf vendor/*; else mkdir vendor; fi && node main.js",
     "clean": "if [ -d 'vendor' ]; then rm -rf vendor/*; else mkdir vendor; fi"

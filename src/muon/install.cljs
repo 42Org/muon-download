@@ -3,9 +3,7 @@
             ["path" :as path]
             ["child_process" :as proc]))
 
-
-(def pkg-resolve (js/require.resolve "mkdirp"))
-;; (def pkg-resolve (js/require.resolve "muon-download"))
+(def pkg-resolve (js/require.resolve "muon-download"))
 
 (defn bin-name [pkg]
   (let [os (.platform os)]
