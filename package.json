@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "build": "lumo build.cljs && rm -rf out/"
+    "build": "lumo build.cljs && rm -rf out/",
+    "postinstall": "mkdir vendor && node main.js"
   },
   "repository": {
     "type": "git",
