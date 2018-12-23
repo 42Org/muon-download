@@ -19,6 +19,6 @@
         app (.slice argv 2)
         child (.spawn proc bin app #js{:stdio "inherit"})]
     (.log js/console "Starting muon")
-    (.on child "close" (fn[code] (.exit process code)))))
+    (.on child "close" (fn[code] (.exit js/process code)))))
 
 (main)
