@@ -16,8 +16,9 @@
   (let [argv js/process.argv
         pkg (.dirname path pkg-resolve)
         bin (bin-name pkg)
-        app (.slice argv 2)]
+        app (.slice argv 2)
+        child (.spawn proc bin app #js{:stdio "inherit"})]
     (.log js/console "Starting muon")
-    (.spawn proc bin app #js{:stdio "inherit"})))
+    (.on child "close" (fn[code] (.exit process code)))))
 
 (main)
